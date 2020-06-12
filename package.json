@@ -1,0 +1,47 @@
+{
+  "name": "sux",
+  "version": "0.1.0",
+  "description": "Simple state manager for JavaScript apps",
+  "main": "dist/sux.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack"
+  },
+  "keywords": [
+    "state",
+    "immutable",
+    "flux",
+    "management"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "author": {
+    "name": "Daniil Fomin",
+    "email": "fomin.daniil.leonidovich@gmail.com",
+    "url": "https://github.com/HolyCoffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HolyCoffee/SuX.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HolyCoffee/SuX/issues"
+  },
+  "jest": {
+    "testRegex": "(/tests/.*\\.test\\.ts)$"
+  },
+  "homepage": "https://github.com/HolyCoffee/SuX#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-typescript": "^7.10.1",
+    "@types/jest": "^26.0.0",
+    "jest": "^26.0.1",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
