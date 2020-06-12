@@ -1,8 +1,8 @@
 {
-  "name": "sux",
+  "name": "fulgrim",
   "version": "0.1.0",
   "description": "Simple state manager for JavaScript apps",
-  "main": "dist/sux.js",
+  "main": "dist/fulgrim.js",
   "scripts": {
     "test": "jest",
     "build": "webpack"
@@ -24,16 +24,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HolyCoffee/SuX.git"
+    "url": "git+https://github.com/HolyCoffee/fulgrim.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HolyCoffee/SuX/issues"
+    "url": "https://github.com/HolyCoffee/fulgrim/issues"
   },
   "jest": {
     "testRegex": "(/tests/.*\\.test\\.ts)$"
   },
-  "homepage": "https://github.com/HolyCoffee/SuX#readme",
+  "homepage": "https://github.com/HolyCoffee/fulgrim#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-typescript": "^7.10.1",
