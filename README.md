@@ -107,8 +107,11 @@ function someWatcher(state) {
  * someWatcher - function that will be called when certain state fields are changed
  * ['someField'] - array of fields from the first level of nesting state (when changing these fields, the function passed by the first argument will be called)
  */
-store.watch(someWatcher, ['someField']);
+const remove = store.watch(someWatcher, ['someField']);
+remove();
 ```
+
+Also watch function return remove function. Call it if you want remove watcher.
 
 `Note!` In order not to block the execution of the rest of the program, the call of the watchers will be made on the next tick event loop.
 

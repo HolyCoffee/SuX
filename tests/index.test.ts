@@ -48,6 +48,7 @@ test('unsubscribe from listener', () => {
   store.dispatch('changeName', 'Semen');
   expect(currentName).toEqual(null);
 });
+
 test('set watcher', async () => {
   let currentName: string = '';
   store.watch(
@@ -59,5 +60,20 @@ test('set watcher', async () => {
   store.dispatch('changeName', 'Vasiliy');
   setTimeout(() => {
     expect(currentName).toEqual('Vasiliy');
+  });
+});
+
+test('remove watcher', async () => {
+  let currentName: string = '';
+  const remove = store.watch(
+    (state) => {
+      currentName = state.name;
+    },
+    ['name']
+  );
+  remove();
+  store.dispatch('changeName', 'Vasiliy');
+  setTimeout(() => {
+    expect(currentName).toEqual('');
   });
 });

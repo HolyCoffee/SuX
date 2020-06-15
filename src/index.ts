@@ -49,7 +49,7 @@ class CreateStore {
     };
   }
 
-  watch(watcher: WatcherType, fields: Array<string> = []): void {
+  watch(watcher: WatcherType, fields: Array<string> = []): () => void {
     for (const field of fields) {
       const findedWatcher = this.watchers[field];
 
@@ -59,6 +59,13 @@ class CreateStore {
         this.watchers[field] = [watcher];
       }
     }
+
+    return () => {
+      for (const field of fields) {
+        const watcherIndex = this.watchers[field].indexOf(watcher);
+        this.watchers[field].splice(watcherIndex, 1);
+      }
+    };
   }
 
   private getDiff(oldState: StateInterface): void {
