@@ -33,9 +33,11 @@ class CreateStore {
       listener(this.state);
     }
 
-    setTimeout(() => {
-      this.getDiff(oldState);
-    });
+    if (Object.keys(this.watchers).length) {
+      setTimeout(() => {
+        this.getDiff(oldState);
+      });
+    }
   }
 
   subscribe(listener: ListenerType): () => void {
