@@ -1,6 +1,6 @@
 {
   "name": "fulgrim",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple state manager for JavaScript apps",
   "main": "dist/fulgrim.js",
   "scripts": {
