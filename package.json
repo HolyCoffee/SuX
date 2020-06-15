@@ -1,11 +1,11 @@
 {
   "name": "fulgrim",
-  "version": "0.1.3",
+  "version": "0.1.6",
   "description": "Simple state manager for JavaScript apps",
-  "main": "dist/fulgrim.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack"
+    "build": "webpack --config ./webpack.config.js"
   },
   "keywords": [
     "state",

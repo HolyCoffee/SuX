@@ -4,8 +4,9 @@ module.exports = {
   mode: 'production',
   entry: './src/index.ts',
   output: {
+    filename: 'index.js',
+    libraryTarget: 'umd',
     path: path.resolve(__dirname, 'dist'),
-    filename: 'fulgrim.js',
   },
   module: {
     rules: [
